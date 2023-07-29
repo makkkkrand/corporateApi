@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class IdGenerator implements IdentifierGenerator {
 
+	private static final long serialVersionUID = 1L;
 	private static final String YYYY_MM_DD_HH_MM_SS = "yyyyMMddHHmmssns";
 
 	@Override

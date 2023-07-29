@@ -15,10 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.medSoft.app.models.Company;
 import com.medSoft.app.services.CompanyService;
 
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-
 @RestController
-@SecurityRequirement(name = "medSoftApi")
 public class CompanyController {
 	@Autowired
 	CompanyService CompanyService;
