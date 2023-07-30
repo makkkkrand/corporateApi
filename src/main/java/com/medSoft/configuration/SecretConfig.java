@@ -17,10 +17,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SecretConfig {
 
-	@Value("${secret.key:MedplusSecretKey}")
+	@Value("${secret.key}")
 	private String secretKey;
 
-	@Value("${secret.salt:Salt_For_Encryption_Util}")
+	@Value("${secret.salt}")
 	private String salt;
 	
 	private static final String PBKDF2_WITH_HMAC_SHA256 = "PBKDF2WithHmacSHA256";
@@ -43,3 +43,7 @@ public class SecretConfig {
 		return new IvParameterSpec(iv);
 	}
 }
+//
+//Anshu jha: 10yr
+//anshu jha k papa: Arun Jha: 48yr
+//

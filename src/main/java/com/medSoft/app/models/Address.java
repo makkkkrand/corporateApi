@@ -1,16 +1,18 @@
 package com.medSoft.app.models;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
-@Embeddable
 @EqualsAndHashCode
-public class Address {
+@Embeddable
+public class Address implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	@Column
 	private String address1;
 	@Column

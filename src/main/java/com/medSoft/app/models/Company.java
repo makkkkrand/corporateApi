@@ -1,6 +1,7 @@
 package com.medSoft.app.models;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.envers.Audited;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
@@ -17,7 +18,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "companyDetails")
-public class Company extends AdditionalInfo {
+@Audited
+public class Company {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -56,5 +58,11 @@ public class Company extends AdditionalInfo {
 	
 	@Column
 	private boolean enabled;
+	
+	@Embedded
+	private AdditionalInfo additionalInfo;
+	
+	@Embedded
+	private Base base;
 	
 }
