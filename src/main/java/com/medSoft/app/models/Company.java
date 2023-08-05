@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -58,6 +59,20 @@ public class Company {
 	
 	@Column
 	private boolean enabled;
+	
+	@Column
+	private String director1;
+	
+	@Column
+	private String director2;
+	
+	@Email
+	@Column
+	private String director1Email;
+	
+	@Email
+	@Column
+	private String director2Email;
 	
 	@Embedded
 	private AdditionalInfo additionalInfo;
