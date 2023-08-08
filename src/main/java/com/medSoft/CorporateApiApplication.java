@@ -10,8 +10,8 @@ import io.swagger.v3.oas.annotations.info.Info;
 @SpringBootApplication
 @EnableDiscoveryClient
 @OpenAPIDefinition(info = @Info(title = "MedSoft Corporate API", version = "1.0", description = "MedSoft Api Information"))
-public class CorporateApplication {
+public class CorporateApiApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(CorporateApplication.class, args);
+		SpringApplication.run(CorporateApiApplication.class, args);
 	}
 }
